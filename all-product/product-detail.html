@@ -76,11 +76,12 @@
         </tbody>
       </table>
 
-      <a href="#" class="btn btn-primary pdd-enquire-btn" id="enquire-btn">Enquire Now</a>
+     <a href="#" class="btn btn-primary" onclick="openEnquiry('Your Product Name'); return false;">Enquire Now</a>  
     </div>
 
   </div>
 </section>
+
 
 <div id="enquiryModal" class="modal">
   <div class="modal-overlay" onclick="closeEnquiry()"></div>
@@ -90,19 +91,26 @@
     <p id="modalProductName">Product enquiry</p>
     <form id="enquiryForm">
       <input type="hidden" id="productInput">
+      
       <div class="form-group">
         <input type="text" id="name" placeholder="Your Name *" required>
       </div>
+      
       <div class="form-group">
         <input type="tel" id="phone" placeholder="Phone Number *" maxlength="10" pattern="[0-9]{10}" required>
       </div>
+
+      <!-- NEW MESSAGE FIELD -->
       <div class="form-group">
         <textarea id="message" name="message" placeholder="Your Message (Optional)" rows="4"></textarea>
       </div>
+      
+
       <button type="submit" class="btn-submit">SUBMIT</button>
     </form>
   </div>
 </div>
+
 
 <section class="final">
     <div class="footer-container">
@@ -167,5 +175,7 @@
 </section>
 
 <script src="pro.js"></script>
+<script src="product.js"></script>
+
 </body>
 </html>
